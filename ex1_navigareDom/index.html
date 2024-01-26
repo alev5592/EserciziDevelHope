@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Esercizio svolto in Pair con Giampiero-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        const html= document.documentElement;
+        const body= html.children[1];
+        const ul= body.children[0];
+        const myLi= ul.children[1];
+        console.log(myLi);
+        console.log(myLi.previousElementSibling);
+        console.log(myLi.nextElementSibling);
+    </script>
+</body>
+
+</html>
