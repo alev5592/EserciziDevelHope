@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <form>
+            <div>
+                <label>First Name:</label>
+                <input type="text" class="form-input" id="firstName" value="Mario" />
+            </div>
+            <div>
+                <label>Last Name:</label>
+                <input type="text" class="form-input" id="lastName" value="Rossi" />
+            </div>
+            <div>
+                <label>Age:</label>
+                <input type="number" class="form-input" id="age" value="25" />
+            </div>
+        </form>
+    </div>
+
+    <script>
+
+
+        var Person = {
+            firstName: "Mario",
+            lastName: "Rossi",
+            age: 25
+        };
+
+        /* questa stringa l'ho recuperata da chat gpt . Ma sul sito di develHope non vi è traccia.*/
+
+        var personJson = JSON.stringify(Person);// converte l'oggetto in json .
+
+
+        // ----------------------------------------------------------------------------------------
+
+        var formElement = document.querySelector('form'); // recupero l'elemento form
+
+
+        formElement.setAttribute('data-person', personJson);// aggiungo l'attributo data-person in formato json
+
+    </script>
+</body>
+
+</html>
